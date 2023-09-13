@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"/> -->
+	<title>
+		shopping
+	</title>
+    <link rel="stylesheet" href="style.css">
+	<!-- <link rel="stylesheet" href="index.css"/> -->
+	<!-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/> -->
+	<script>
+		
+		function Delete(e){
+			let items = [];
+			JSON.parse(localStorage.getItem('items')).map(data=>{
+				if(data.id != e.parentElement.parentElement.children[0].textContent){
+					
+					items.push(data);
+
+				}
+			});
+			localStorage.setItem('items',JSON.stringify(items));
+			window.location.reload();
+		};
+	</script>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <header id="header" class="header">
+                <h1>Your-Mart </h1>
+                <div class="iconShopping">
+                    <p></p>
+                    <i class="fa fa-shopping-cart"></i>
+                </div>
+            </header><!-- /header -->
+            <div class="itemsBox">
+                <div class="item">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20230629/OkZX/649cd02da9b42d15c91bc6c0/-473Wx593H-466083920-navy-MODEL3.jpg" alt="Men's Solid Regular Fit T-Shirt" width="200" height="200"/>
+                    <div class="itemInfo">
+                        <h1>Men's  Fit T-Shirt</h1>
+                        <p>Rs <span> 499</span></p>
+                        <a href="#" title="add to cart" class="attToCart">Add to cart</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://assets.bonkerscorner.com/uploads/2022/10/13165635/Bonkerscorner_see_you_later01.jpg" width="200px" height="200px"/>
+                    <div class="itemInfo">
+                        <h1>Faded Effect Oversized T-shirt
+                        </h1>
+                        <p>Rs <span> 599</span></p>
+                        <a href="#" title="add to cart" class="attToCart">Add to cart</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://assets.bonkerscorner.com/uploads/2022/11/13145453/Bonkerscorner_Blue_cereal_killer_04-1024x1536.jpg" width="200px"  height="200px"/>
+                    <div class="itemInfo">
+                        <h1>BlueKiller Oversized T-shirt</h1>
+                        <p>Rs<span>799</span></p>
+                        <a href="#" title="add to cart" class="attToCart">Add to cart</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://images.bewakoof.com/t1080/men-s-purple-beast-within-2-0-oversized-t-shirt-581488-1677228999-3.jpg" width="200px"  height="200px"/>
+                    <div class="itemInfo">
+                        <h1>Men's Purple Beast  Graphic T-shirt
+                        </h1>
+                        <p>Rs<span>749</span></p>
+                        <a href="#" title="add to cart" class="attToCart">Add to cart</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://www.mydesignation.com/wp-content/uploads/2020/08/theyyam-tshirt-mydesignation-image-.jpg" width="200px"  height="200px"/>
+                    <div class="itemInfo">
+                        <h1>Theyyam Tshirt – Kathakali</h1>
+                        <p>Rs<span>399</span></p>
+                        <a href="#" title="add to cart" class="attToCart">Add to cart</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://images.bewakoof.com/t1080/men-s-black-i-need-some-space-teddy-graphic-printed-oversized-t-shirt-502010-1693894483-1.jpg" width="200px"  height="200px"/>
+                    <div class="itemInfo">
+                        <h1>Men's Black I Need Some Space Teddy </h1>
+                        <p>Rs<span>649</span></p>
+                        <a href="#" title="add to cart" class="attToCart">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cartBox">
+            <div class="cart">
+                <i class="fa fa-close"></i>
+                <h1>My Cart</h1>
+                <table></table>
+            </div>
+        </div>
+    </div>
+
+
+
+	<!-- script -->
+	<script src="index.js"></script>
+</body>
+</html>
